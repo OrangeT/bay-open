@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>Index</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+        var photo_url = "";
+        var photo_link = "";
+        var photo_title = "";
+
+        var jsonFlickrApi = function(rsp) {
+            var index = Math.floor(Math.random() * 100) + 1;
+
+            if (rsp.stat == "ok" && rsp.photos.photo.length > 0) {
+                var photo = rsp.photos.photo[index];
+
+                // http://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}_[mstzb].jpg
+                photo_url = "http://farm" + photo.farm + ".staticflickr.com/" + photo.server + "/" + photo.id + "_" + photo.secret + "_" + "b.jpg";
+
+                // http://www.flickr.com/photos/{user-id}/{photo-id}
+                photo_link = "http://www.flickr.com/photos/" + photo.owner + "/" + photo.id;
+
+                photo_title = photo.title;
+
+                update();
+            }
+        };
+
+        var update = function() {
+            if (document.readyState !== "complete") {
+                window.setTimeout(update, 500);
+                return;
+            }
+
+            var css = 'url(' + photo_url + ')';
+            $("body").css("background-image", css);
+
+            var photocredit = $('a.photocredit');
+            photocredit.attr("href", photo_link);
+            photocredit.text(photo_title);
+        };
+        
+    </script>
+    <script type="text/javascript" src="http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5898c941da3c04d790e330f5edd66fa&text=morecambe+bay&license=1%2C2%2C4%2C5%2C7&per_page=100&page=1&format=json"></script>
+    
+    <style type="text/css" media="all">
+        body {
+            background-color: lightgrey;
+            background-size: cover;
+            background-position: top center;
+            font-family: Aldrich;
+        }
+
+        .shade {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 910px;
+            margin: 0 auto;
+
+            background: black;
+            opacity: 0.6;
+            z-index: -1;
+        }
+
+        .wrapper {
+            padding-top: 100px;
+            width:900px;
+            margin: 0 auto;
+        }
+
+        nav {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 180px;
+            bottom: 0;
+        }
+        nav ul { padding-left: 0; }
+        nav ul li { list-style: none; list-style-position: inside; margin-bottom: 20px; }
+        nav ul li a { background: white; padding: 5px 10px; text-decoration: none; color: black; border-right: 2px solid black; border-top: 2px solid black; border-bottom: 2px solid black; box-shadow: 5px 5px 5px #888; }
+
+        h1 {}
+        h1 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+
+        dl { float: right; }
+        dl dt { margin-bottom: 15px; }
+        dl dt span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+        dl dd { margin-bottom: 30px; }
+        dl dd span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+
+        footer { clear: both; text-size: 0.5em; text-align: center; color: white; padding-top: 50px; }
+        footer a { color: white; } 
+        footer a.tentacle { color: orange; }
+    </style>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Enter</a></li>
+            <li><a href="#">Entry</a></li>
+            <li><a href="#">On The Day</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <h1><span>The Bay Open 2013</span></h1>
+
+        <dl>
+            <dt><span>When:</span></dt>
+            <dd><span>Sunday 1st December 2013</span></dd>
+            <dt><span>Where:</span></dt>
+            <dd><span>Lancaster &amp; Morecambe College Sports Centre, LA1 2TY</span></dd>
+            <dt><span>What:</span></dt>
+            <dd><span>Three weapons non-ranked fencing open.</span></dd>
+            <dt><span>Flatcaps:</span></dt>
+            <dd><span>Optional</span></dd>
+
+        </dl>
+
+        <footer>
+            Site: &copy; 2013 Designed By A <a class="tentacle" href="http://www.orangetentacle.co.uk/">Tentacle</a>.<br />
+            Photo: <a class="photocredit" href="#">Photo Credit</a>. Some Rights Reserved.
+        </footer>
+    </div>
+
+    <div class="shade"></div>
+
+</body>
+</html>
