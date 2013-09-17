@@ -32,16 +32,21 @@ nav {
     left: 0;
     top: 180px;
 }
+
 nav ul { padding-left: 0; }
 nav ul li { list-style: none; list-style-position: inside; margin-bottom: 20px; }
-nav ul li a { background: white; padding: 5px 10px; text-decoration: none; color: black; border-right: 2px solid black; border-top: 2px solid black; border-bottom: 2px solid black; box-shadow: 5px 5px 5px #888; }
+nav ul li a { background: white; padding: 5px 10px; text-decoration: none; color: black; border-right: 2px solid black; border-top: 2px solid black; border-bottom: 2px solid black; box-shadow: 5px 5px 5px #888; -webkit-transition: padding-left 0.5s; transition: padding-left: 0.5s; }
+nav ul li a.selected { background: orange; }
+nav ul li a:hover {
+    padding-left: 50px;
+}
 
 .wrapper nav { position: relative; top: 0; margin: 0; }
 .wrapper nav ul li { display: block; }
 .wrapper nav ul ul { display: inline-block; }
 .wrapper nav ul li ul li {display: inline-block; }
-.wrapper nav ul li a { border: 2px solid black; }
-.wrapper nav ul li a:hover { background: orange; }
+.wrapper nav ul li a { border: 2px solid black; transition: background 0.2s; -webkit-transition: background 0.2s; }
+.wrapper nav ul li a:hover { background: orange; padding-left: 10px; }
 
 h1 {}
 h1 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
