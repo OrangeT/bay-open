@@ -3,6 +3,7 @@ body {
     background-size: cover;
     background-position: top center;
     font-family: Aldrich;
+    position: relative;
 }
 
 .shade {
@@ -39,6 +40,9 @@ nav ul li a { background: white; padding: 5px 10px; text-decoration: none; color
 h1 {}
 h1 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
 
+h2 { margin-top: 2em; }
+h2 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+
 dl { float: right; }
 dl dt { margin-bottom: 15px; }
 dl dt span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
@@ -48,7 +52,7 @@ dl dd span { background: white; padding: 5px 10px; border: 2px solid black; box-
 p { width: 800px; margin: auto; background: white; border: 2px solid black; margin-top: 2em; padding: 10px 10px; box-shadow: 5px 5px 5px #888; line-height: 1.5em; }
 p a { color: black; }
 
-footer { clear: both; text-size: 0.5em; text-align: center; color: white; padding-top: 50px; }
+footer { clear: both; text-size: 0.5em; text-align: center; color: white; padding-top: 50px; padding-bottom: 50px; }
 footer a { color: white; } 
 footer a.tentacle { color: orange; }
 
