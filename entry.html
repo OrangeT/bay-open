@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <title>The Bay Open</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+    <link href='css/style.css' rel='stylesheet' type='text/css'>
+
+    <script id="entry-list" type="text/html">
+        <table class="entry-list">
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Club</th>
+                <th>Veteran</th>
+                <th>Cadet</th>
+            </thead>
+            <tbody>
+            {{#.}}
+                <tr>
+                    <td>{{attendee.first_name}}</td>
+                    <td>{{attendee.last_name}}</td>
+                    <td>{{attendee.answers.0.answer.answer_text}}</td>
+                    <td>{{attendee.answers.1.answer.answer_text}}</td>
+                    <td>{{attendee.answers.2.answer.answer_text}}</td>
+                </tr>
+            {{/.}}
+            </tbody>
+        </table>
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="js/background.js"></script>
+    <script type="text/javascript" src="js/tickets.js"></script>
+    <script type="text/javascript" src="http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=b5898c941da3c04d790e330f5edd66fa&text=morecambe+bay&license=1%2C2%2C4%2C5%2C7&per_page=100&page=1&format=json"></script>
+
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Enter</a></li>
+            <li><a href="#">Entry</a></li>
+            <li><a href="#">On The Day</a></li>
+            <li><a href="#">Rules</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Results</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <h1><span>The Bay Open 2013 - Entries</span></h1>
+
+        <h2><span>Sabre Entries</span></h2>
+        <div id="sabreEntry">
+        </div>
+
+        <h2><span>Epee Entries</span></h2>
+        <div id="epeeEntry">
+        </div>
+
+        <h2><span>Foil Entries</span></h2>
+        <div id="foilEntry">
+        </div>
+
+        <footer>
+            Site: &copy; 2013 Designed By A <a class="tentacle" href="http://www.orangetentacle.co.uk/">Tentacle</a>.<br />
+            Photo: <a class="photocredit" href="#">Photo Credit</a>. Some Rights Reserved.
+        </footer>
+    </div>
+
+    <div class="shade"></div>
+
+</body>
+</html>

@@ -51,6 +51,10 @@ dl dd span { background: white; padding: 5px 10px; border: 2px solid black; box-
 p { width: 800px; margin: auto; background: white; border: 2px solid black; margin-top: 2em; padding: 10px 10px; box-shadow: 5px 5px 5px #888; line-height: 1.5em; }
 p a { color: black; }
 
+table.entry-list { background: white; width: 820px; margin: 0 auto; border-collapse: collapse; box-shadow: 5px 5px 5px #888; }
+table.entry-list td,
+table.entry-list th { border: 2px solid black; padding: 5px; }
+
 footer { clear: both; text-size: 0.5em; text-align: center; color: white; padding-top: 50px; padding-bottom: 50px; }
 footer a { color: white; } 
 footer a.tentacle { color: orange; }
