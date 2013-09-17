@@ -45,6 +45,9 @@ dl dt span { background: white; padding: 5px 10px; border: 2px solid black; box-
 dl dd { margin-bottom: 30px; }
 dl dd span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
 
+p { width: 800px; margin: auto; background: white; border: 2px solid black; margin-top: 2em; padding: 10px 10px; box-shadow: 5px 5px 5px #888; line-height: 1.5em; }
+p a { color: black; }
+
 footer { clear: both; text-size: 0.5em; text-align: center; color: white; padding-top: 50px; }
 footer a { color: white; } 
 footer a.tentacle { color: orange; }
