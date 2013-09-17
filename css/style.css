@@ -57,11 +57,15 @@ dl.check-in dd a img { vertical-align: middle; }
 p { width: 800px; margin: auto; background: white; border: 2px solid black; margin-top: 2em; padding: 10px 10px; box-shadow: 5px 5px 5px #888; line-height: 1.5em; }
 p a { color: black; }
 
+ol { width: 790px; padding: 1em 1em 0 1em; margin: 1em auto 0 auto; background: white; border: 2px solid black; box-shadow: 5px 5px 5px #888; line-height: 1.5em; }
+ol li { margin-bottom: 1em; list-style-position: inside; }
+ol ol { border: none; width: 770px; box-shadow: none; }
+
 table.entry-list { background: white; width: 820px; margin: 0 auto; border-collapse: collapse; box-shadow: 5px 5px 5px #888; }
 table.entry-list td,
 table.entry-list th { border: 2px solid black; padding: 5px; }
 
-footer { clear: both; text-size: 0.5em; text-align: center; color: white; padding-top: 50px; padding-bottom: 50px; }
+footer { clear: both; font-size: 0.7em; text-align: center; color: white; padding-top: 50px; padding-bottom: 50px; }
 footer a { color: white; } 
 footer a.tentacle { color: orange; }
 
