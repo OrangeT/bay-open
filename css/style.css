@@ -36,13 +36,21 @@ nav ul { padding-left: 0; }
 nav ul li { list-style: none; list-style-position: inside; margin-bottom: 20px; }
 nav ul li a { background: white; padding: 5px 10px; text-decoration: none; color: black; border-right: 2px solid black; border-top: 2px solid black; border-bottom: 2px solid black; box-shadow: 5px 5px 5px #888; }
 
+.wrapper nav { position: relative; top: 0; margin: 0; }
+.wrapper nav ul li { display: block; }
+.wrapper nav ul ul { display: inline-block; }
+.wrapper nav ul li ul li {display: inline-block; }
+.wrapper nav ul li a { border: 2px solid black; }
+.wrapper nav ul li a:hover { background: orange; }
+
 h1 {}
 h1 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
 
-h2 { clear: left; margin-top: 2em; }
-h2 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
-h2 a { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; color: black; text-decoration: none; }
-h2 a hover { text-decoration: underline; }
+h2, h3 { clear: left; margin-top: 2em; }
+h2 span, h3 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+h2 a, h3 a { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; color: black; text-decoration: none; }
+h2 a:hover, h3 a:hover { text-decoration: underline; }
+h2 a.target:hover, h3 a.target:hover { text-decoration: none; }
 
 dl { float: right; }
 dl.check-in { float: left; }
@@ -67,6 +75,13 @@ ol ol { border: none; width: 770px; box-shadow: none; }
 table.entry-list { background: white; width: 820px; margin: 0 auto; border-collapse: collapse; box-shadow: 5px 5px 5px #888; }
 table.entry-list td,
 table.entry-list th { border: 2px solid black; padding: 5px; }
+
+table.results { background: white; width: 820px; margin: 0 auto; border-collapse: collapse; box-shadow: 5px 5px 5px #888; border: 2px solid black; }
+table.results tr:nth-child(odd) td { background: lightgrey; }
+table.results tr.gold td { background: gold; }
+table.results tr.silver td { background: silver; }
+table.results tr.bronze td { background: darkgoldenrod; }
+table.results tr:hover td { background: orange; }
 
 footer { clear: both; font-size: 0.7em; text-align: center; color: white; padding-top: 50px; padding-bottom: 50px; }
 footer a { color: white; } 
