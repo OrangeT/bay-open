@@ -39,14 +39,20 @@ nav ul li a { background: white; padding: 5px 10px; text-decoration: none; color
 h1 {}
 h1 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
 
-h2 { margin-top: 2em; }
+h2 { clear: left; margin-top: 2em; }
 h2 span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+h2 a { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; color: black; text-decoration: none; }
+h2 a hover { text-decoration: underline; }
 
 dl { float: right; }
+dl.check-in { float: left; }
 dl dt { margin-bottom: 15px; }
 dl dt span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
 dl dd { margin-bottom: 30px; }
 dl dd span { background: white; padding: 5px 10px; border: 2px solid black; box-shadow: 5px 5px 5px #888; }
+dl.check-in dt { margin-left: 40px; float: left; clear: left; }
+dl.check-in dd { float: left; width: 200px; }
+dl.check-in dd a img { vertical-align: middle; }
 
 p { width: 800px; margin: auto; background: white; border: 2px solid black; margin-top: 2em; padding: 10px 10px; box-shadow: 5px 5px 5px #888; line-height: 1.5em; }
 p a { color: black; }
