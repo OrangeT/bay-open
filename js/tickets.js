@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var url = "http://json2jsonp.com/?callback=?&url=https%3A%2F%2Fwww.eventbrite.com%2Fjson%2Fevent_list_attendees%3Fid%3D8361348017%26app_key%3DTK33PTRBQQXDJZQTEA";
+    var url = "https%3A%2F%2Fwww.eventbrite.com%2Fjson%2Fevent_list_attendees%3Fid%3D15046250741%26app_key%3DTK33PTRBQQXDJZQTEA%26user_key%3D12529159772113316988";
 
     $.getJSON(url, null, function(data) {
 
